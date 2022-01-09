@@ -58,3 +58,7 @@ volumes:
 networks:
   front-tier:
   back-tier:
+  
+  # use nodemon rather than node for local dev
+  # use nodemon rather than node for local dev
+  # use nodemon rather than node for local dev
