@@ -7,11 +7,10 @@ services:
     depends_on:
       - redis
     volumes:
-     - ./vote:/app
+     - /vote:/app
     ports:
       - "5000:80"
     networks:
-      - front-tier
       - back-tier
 
   result:
@@ -21,7 +20,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./result:/app
+      - /result:/app
     ports:
       - "5001:80"
       - "5858:5858"
@@ -49,7 +48,7 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres"
     volumes:
-      - "db-data:/var/lib/postgresql/data"
+      - "db-data:/var/libs/postgresqls/data"
     networks:
       - back-tier
 volumes:
